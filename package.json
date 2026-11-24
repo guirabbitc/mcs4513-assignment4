@@ -1,0 +1,23 @@
+{
+  "name": "enrollmentnow",
+  "version": "1.0.2",
+  "description": "MCS 4513 Assignment 4 - automated integration and UI tests for EnrollmentNow",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "db:migrate": "node scripts/migrate.js",
+    "start": "node src/server.js",
+    "test:integration": "vitest run --reporter=verbose",
+    "test:ui": "playwright test",
+    "test": "npm run db:migrate && npm run test:integration && npm run test:ui"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "supertest": "^7.3.2",
+    "vitest": "^5.1.1"
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EnrollmentNow - Course</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+    button { font-size: 1rem; padding: 8px 16px; margin-right: 8px; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #1a56db; outline-offset: 2px; }
+    #confirm-dialog { border: 1px solid #999; padding: 16px; margin-top: 16px; }
+    .success { color: #116329; }
+    .error { color: #a40e26; }
+  </style>
+</head>
+<body>
+  <header><p>EnrollmentNow</p></header>
+  <main>
+    <h1 id="course-heading">Loading course…</h1>
+    <p data-testid="seat-count" id="seat-count"></p>
+
+    <button type="button" id="register-button">Register</button>
+
+    <div id="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+      <h2 id="confirm-title">Confirm registration</h2>
+      <p id="confirm-text"></p>
+      <button type="button" id="confirm-button">Confirm</button>
+      <button type="button" id="cancel-button">Cancel</button>
+    </div>
+
+    <p role="status" aria-live="polite" id="status-message"></p>
+  </main>
+
+  <script type="module" src="/course.js"></script>
+</body>
+</html>
